@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:local="clr-namespace:SimpleShell"      
+            xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="SimpleShell.AppShell">
+
+    <TabBar>
+        <Tab Title="Main">
+            <Tab.Icon>
+                <FontImageSource Glyph="{x:Static local:IconFont.Home}"
+                                 FontFamily="{StaticResource FontAwesome}"
+                                 Size="18" />
+            </Tab.Icon>
+            <ShellContent ContentTemplate="{DataTemplate local:MainPage}" />
+        </Tab>
+        <Tab Title="About">
+            <Tab.Icon>
+                <FontImageSource Glyph="{x:Static local:IconFont.Info}"
+                                 FontFamily="{StaticResource FontAwesome}"
+                                 Size="18" />
+            </Tab.Icon>
+            <ShellContent ContentTemplate="{DataTemplate local:AboutPage}" />
+        </Tab>
+    </TabBar>
+    
+</Shell>
